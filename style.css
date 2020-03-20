@@ -53,6 +53,35 @@ nav {
   font-size: 20px;
 }
 
+ul {
+  list-style: none;
+}
+
+.cart-mobile {
+  /* margin-right: 0; */
+  /* margin-left: 3em; */
+  color: black;
+  font-size: 20px;
+  list-style: none;
+  text-decoration: none;
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+/* End Nav */
+
 .page {
   min-height: 90vh;
   display: grid;
@@ -86,4 +115,61 @@ nav {
 .hero img {
   height: 500px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    overflow-x: hidden;
+  }
+  .top-nav {
+    width: 100vw;
+  }
+  .logo {
+    font-size: 1.2em;
+    font-weight: bolder;
+    flex: 3;
+    justify-content: center;
+  }
+  .nav-links {
+    display: none;
+  }
+  .burger {
+    display: block;
+    margin-right: 3em;
+    flex: 1;
+  }
+
+  .cart-mobile {
+    display: block;
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .page {
+    grid-template-columns: 5% 1fr 5%;
+    align-items: center;
+  }
+
+  .details {
+    grid-column: 2 / 3;
+    margin-top: 3em;
+    text-align: center;
+  }
+
+  .details h1 {
+    font-size: 34px;
+  }
+
+  .details h2 {
+    font-size: 20px;
+  }
+
+  .hero {
+    grid-column: 2/3;
+  }
+
+  .hero img {
+    width: 300px;
+    height: 300px;
+  }
 }
